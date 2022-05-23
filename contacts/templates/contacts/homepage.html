@@ -1,0 +1,25 @@
+
+{% extends 'contacts/base.html' %}
+{% block content%}
+<h1>
+    THIS IS THE HOME PAGE
+</h1>
+<button type="button" class="btn btn-light"><a href= '#'>Create Post</a></button>
+<div class =''>
+
+
+{% for p in posts %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="author">{{ p.author }}</h5>
+      <h6 class="phone_number mb-2 text-muted">{{ p.phone_number}}</h6>
+      <p class="misc">{{ p.misc }}</p>
+
+    </div>
+  </div>
+{% endfor %}
+
+</div>
+
+{% endblock %}
